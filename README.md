@@ -1,3 +1,2 @@
 # EngineerRunner.github.io
-the website by me.  
-EngineerRunner.github.io
+[the website](EngineerRunner.github.io) by me.
