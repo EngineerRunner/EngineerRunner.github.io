@@ -101,3 +101,4 @@ Sound (using the music extension), Online, and more.
  - Custom Extensions - make an extension!
  - More temporary variables, for runif and other similar blocks.
  - Loading from a file.
+# SPRITES WILL NEVER BE ADDED, AT LEAST IN THE TRADITIONAL, SCRATCH WAY.
