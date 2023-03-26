@@ -5,11 +5,13 @@ This page has all the syntax you'll need to use it.
 *Everything's a function!™*
 # NOTICE: RUNNING A PROGRAM FROM A FILE IS NOT YET SUPPORTED. IT IS JUST A COMMAND PROMPT FOR NOW.
 
-## Basic Syntax
+## Basics
 
 Generally, you use a comma to show the start of an argument. Exceptions to this are listed in the section for each block, listed below.
-
+There is a global "temporary variable". This acts like a "return" in other programming languages, and is used by everything. This temporary variable is mostly used internally, however it is also accessible in most scripts by calling "temp" as a parameter.
 On this page, // means a comment.
+
+## Functions
 
 ### print
 
@@ -48,13 +50,31 @@ This example on one line would be:
  I told you it was complicated!
 
 ### add
-Adds 2 arguments together.
+Adds 2 arguments together, and writes it to temp.
 Usage:
 
     add, 1, 2
 
+### subtract
+Subtracts Argument 2 from Argument 1, and writes it to temp.
+Usage:
+
+    subtract, 47, 92
+
+### multiply
+Multiplies Argument 1 by Argument 2, and writes it to temp.
+Usage:
+
+    multiply, 5,7534
+
+### divide
+Divides Argument 1 by Argument 2, and writes it to temp.
+Usage:
+
+    divide, 5,7534
+
 ### varget
-Gets a variable from the global variable list. If the variable doesn't exist, this returns 0.
+Gets a variable from the global variable list and writes it to temp. If the variable doesn't exist, this returns 0.
 Usage:
 
     varget, variable-name
@@ -96,7 +116,6 @@ Sound (using the music extension), Online, and more.
 ## Planned Blocks/Features
 
  - runifelse - Just runif but also runs something else if the value is false.
- - subtract, multiply, divide
  - Custom Functions - make your own function
  - Custom Extensions - make an extension!
  - More temporary variables, for runif and other similar blocks.
