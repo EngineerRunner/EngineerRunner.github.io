@@ -8,7 +8,7 @@ This page has all the syntax you'll need to use it.
 ## Basics
 
 Generally, you use a comma to show the start of an argument. Exceptions to this are listed in the section for each block, listed below.
-There is a global "temporary variable". This acts like a "return" in other programming languages, and is used by everything. This temporary variable is mostly used internally, however it is also accessible in most scripts by calling "temp" as a parameter.
+There is a global "temporary variable". This acts like a "return" in other programming languages, and is used by everything. This temporary variable is accessible in most scripts by calling "temp" as a parameter.
 On this page, // means a comment.
 
 ## Functions
@@ -36,7 +36,7 @@ Returns "world". Used for testing.
 
 
 ### equalto
-Sets a temporary variable to true or false, depending on whether both arguments are equal. **(do not rely on this variable, as it is used globally. Use the setvar function to set a var to this value.)**
+Sets the temporary variable to true or false, depending on whether both arguments are equal
 
 ### runif
 Runs the first argument as code, if the value is true. This block is very complicated, but here's a quick look at the syntax. (This would be all on one line, but it is indented to make it easier to read.)
@@ -47,7 +47,8 @@ Runs the first argument as code, if the value is true. This block is very compli
 This example on one line would be:
 
     runif, print; hello world, equalto, 1, 2
- I told you it was complicated!
+ 
+I told you it was complicated!
 
 ### add
 Adds 2 arguments together, and writes it to temp.
@@ -86,8 +87,13 @@ Usage:
     varset, variable-name, value
 
 ### input
-Uses Scratch's "ask and wait" block. Sets a variable in the global variable list, the answer variable, to the value entered by the user.
+Uses Scratch's "ask and wait" block. Sets a variable in the global variable list, the answer variable, to the value entered by the user. Also sets the temp variable to the answer
 
+### storetemp
+Stores the temporary variable to another accessible variable. Unlike variables in the global list, this can directly be used as a parameter of a variable. This variable is accessible with the keyword **stored**. (If you haven't seen already, the keyword for the temporary variable is **temp**.
+
+### restore temp
+Sets the temporary variable to the stored variable.
 ## Pen Blocks
 
 There's also pen blocks, to be used in conjunction with cmdhide.
@@ -109,7 +115,14 @@ Same as pentox, but for a Y coordinate.
 Same as pentox/pentoy, but does both at once. Argument 1 is X, Argument 2 is Y.
 ### pensettings
 Just the "set pen () to ()" block from Scratch. Argument 1 can be colour, saturation, brightness or transparency, and Argument 2 is a value from 0 to 100.
+## Program Loading
+You can now load apps!
 
+ 1. Enter command "loadstart" to show the list.
+ 2. See inside the project.
+ 3. Right click the list that was shown and import the file.
+ 4. Type loaddone.
+ 5. Enjoy!
 # Features planned:
 ## More extensions
 Sound (using the music extension), Online, and more.
@@ -119,5 +132,4 @@ Sound (using the music extension), Online, and more.
  - Custom Functions - make your own function
  - Custom Extensions - make an extension!
  - More temporary variables, for runif and other similar blocks.
- - Loading from a file.
 # SPRITES WILL NEVER BE ADDED, AT LEAST IN THE TRADITIONAL, SCRATCH WAY.
